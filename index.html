@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav id="navbar">
+  <header>Git and Github</header>
+
+  <a class="nav-link" href="#Git_&_GitHub_for_Beginner">Git & GitHub for Beginner</a>
+  <a class="nav-link" href="#What_is_Git?">What is Git?</a>
+  <a class="nav-link" href="#Basic_Git_Commands">Basic Git Commands</a>
+  <a class="nav-link" href="#Staging_and_Committing">Staging and Committing</a>
+  <a class="nav-link" href="#Connecting_to_GitHub">Connecting to GitHub</a>
+  <a class="nav-link" href="#Push_and_Pull">Push and Pull</a>
+  <a class="nav-link" href="#Branches">Branches</a>
+  <a class="nav-link" href="#.gitignore">.gitignore</a>
+  <a class="nav-link" href="#Common_Git_Problems">Common Git Problems</a>
+  <a class="nav-link" href="#Quick_Reference">Quick Reference</a>
+</nav>
+
+  <main id="main-doc">
+
+    <section class="main-section" id="Git_&_GitHub_for_Beginner">
+      <header>Git & GitHub for Beginner</header>
+      
+
+      <p>Welcome to the Git & GitHub Guide For Beginner! This documentation is designed for beginners who are learning how to use Git and GitHub for the first time.</p>
+      <p>Git can seem confusing at first, but once you understand the basic commands and how Git works, it becomes an essential tool for managing your projects.</p>
+
+      <p>A simple way to remember the difference is:</p>
+
+      <ul>
+        <li>Git = the tool that tracks your changes.</li>
+        <li>GitHub = an online platform where you can store and share your Git repositories.</li>
+      </ul>
+
+    </section>
+
+    <section class="main-section" id="What_is_Git?">
+      <header>What is Git?</header>
+
+      <p>Git is a distributed version control system created to help developers manage changes to their code.</p>
+      <p>Git allows you to keep track of changes within the same project.</p>
+
+      <p>Git can help you:</p>
+
+      <ul>
+        <li>track changes to files</li>
+        <li>Work with other developers</li>
+        <li>Keep a history of your project</li>
+      </ul>
+    </section>
+
+    <section class="main-section" id="Basic_Git_Commands">
+      <header>Basic Git Commands</header>
+
+      <p>Here are some of the most commonly used Git commands:</p>
+
+      <p><b>git init</b></p>
+      <p>Creates a new Git repository.</p>
+      <code>git init</code>
+
+      <p><b>git status</b></p>
+      <p>Shows the current state of your repository.</p>
+      <code>git status</code>
+
+     <p><b>git add</b></p>
+      <p>Adds changes to the staging area.</p>
+      <code>git add index.html</code>
+
+      <p>You can also add multiple files:</p>
+      <code>git add .</code>
+
+      <p><b>git commit</b></p>
+      <p>Saves the staged changes to your Git history.</p>
+      <code>git commit -m "Add homepage"l</code>
+      <p>The message inside the quotation marks should briefly describe what you changed.</p>
+
+    </section>
+
+    <section class="main-section" id="Staging_and_Committing">
+      <header>Staging and Committing</header>
+
+    <p>Git uses a staging area before changes are committed.</p>
+
+    <p>A simple way to understand the process is:</p>
+
+  <p class="git-flow">
+    Working Directory <br>
+    ↓ <br>
+    git add<br>
+    ↓<br>
+    Staging Area<br>
+    ↓ <br>
+    git commit<br>
+    ↓ <br>
+    Git Repository
+  </p>
+
+    <p>For example:</p>
+
+    <code>git status<br>
+    git add .<br>
+    git commit -m "Update website"</code>
+
+
+    <ol>
+      <li>The first command checks your changes.</li>
+      <li>The second command stages the changes.</li>
+      <li>The third command records the changes in your Git history.</li>
+    </ol>
+
+    </section>
+
+    <section class="main-section" id="Connecting_to_GitHub">
+      <header>Connecting to GitHub</header>
+
+    <p>After creating a repository locally, you can connect it to a GitHub repository.</p>
+
+    <p>First, create a repository on GitHub.</p>
+
+    <p>Then connect your local repository to the remote repository:</p>
+
+    <code>git remote add origin https://github.com/username/repository-name.git</code>
+
+    <p>You can check the remote repository with:<p>
+
+      <code>git remote -v</code>
+
+    <p>The word <b>origin</b> is commonly used as the name of the remote repository.</p>
+    </section>
+
+    
+
+    <section class="main-section" id="Push_and_Pull">
+      <header>Push and Pull</header>
+
+
+        <h1>Push</h1>
+       <p>The <b>git push</b> command sends your local commits to a remote repository such as GitHub.</p>
+
+    <p>For example:</p>
+
+    <code>git push -u origin main</code>
+
+    <p>After the first push, you can usually use:</p>
+
+    <code>git push</code>
+
+    <p>A simple way to remember it:<br><b>Push = send your local changes to GitHub.</b></p>
+
+    <h1>Pull</h1>
+    <p>The <b>git pull</b> command downloads changes from a remote repository and updates your local project</p>
+
+    <code>git pull</code>
+
+    <p>A simple way to remember it:<br><b>Pull = get changes from the remote repository.</b></p>
+
+    </section>
+
+    <section class="main-section" id="Branches">
+      <header>Branches</header>
+
+      <p>Branches allow you to work on different versions of a project without directly changing the main branch.</p>
+
+      <p>To create a new branch:</p>
+
+      <code>git branch feature</code>
+
+      <p>To switch to the branch:</p>
+
+      <code>git switch feature</code>
+
+      <p>You can also create and switch to a branch using:</p>
+
+      <code>git switch -c feature</code>
+
+      <p>Branches are useful when developing new features or testing changes.</p>
+
+    </section>
+
+    <section class="main-section" id=".gitignore">
+      <header>.gitignore</header>
+
+      <p>A <b>.gitignore</b> file tells Git which files or folders should not be tracked.</p>
+
+      <p>For example:</p>
+
+      <code>node_modules/<br>.env<br>*.log</code>
+
+      <p>You might use <b>.gitignore</b> for:</p>
+      
+      <ul>
+        <li>Secret files</li>
+        <li>Passwords or API keys</li>
+        <li>Large generated files</li>
+        <li>Operating system files</li>
+      </ul>
+
+      <p>Example .gitignore</p>
+
+      <code>node_modules/<br> .env<br> .DS_Store<br> *.log</code>
+
+      <p>Never commit passwords, private keys, or other sensitive information to a public repository.</p>
+
+    </section>
+
+    <section class="main-section" id="Common_Git_Problems">
+      <header>Common Git Problems</header>
+
+      <h1>Not a Git Repository</h1>
+      <p>If you see:</p>
+
+      <code>fatal: not a git repository</code>
+
+      <p>Make sure you are inside your project folder and run:</p>
+
+      <code>git init</code>
+
+      <h1>Nothing to Commit</h1>
+
+      <p>If Git says:</p>
+
+      <code>nothing to commit, working tree clean</code>
+
+      <p>It means there are no new changes to save.</p>
+      
+      <p>Check your files with:</p>
+
+      <code>git status</code>
+
+      <h1>Accidentally Added Files</h1>
+
+      <p>If you accidentally use:</p>
+
+      <code>git add .</code>
+
+      <p>You can unstage the files with:</p>
+
+      <code>git restore --staged .</code>
+
+    </section>
+
+    <section class="main-section" id="Quick_Reference">
+      <header>Quick Reference</header>
+
+    <p>Need more Git commands? Visit the official Git documentation for a complete reference of Git commands and features  <a href="https://git-scm.com/docs" target="_blank"> View Git Documentation </a></p>
+
+    
+
+    </section>
+
+  </main>
+
+</body>
+</html>
+
